@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Time</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="images (8).jpeg">
+</head>
+
+<body onload="clock()">
+    <h2 id="week"></h2>
+    <br> <h1>My Time</h1>
+    <h2 id="txt"></h2>
+
+    <script src="script.js">
+
+    </script>
+
+    <script>
+        function clock() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+            setTimeout(clock, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            };
+            return i;
+        }
+    </script>
+</html>
+</body>
