@@ -9,4 +9,7 @@ h2 {
     border: solid white 3px;
     background-color: black;
     color: white;
+    box-shadow: 0 0 9px cyan,
+            0 0 40px cyan;
+   
 }
